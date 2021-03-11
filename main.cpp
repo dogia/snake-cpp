@@ -1,13 +1,22 @@
 #include <iostream>
 #include <stdlib.h>
 #include <string.h>
+#include <locale.h>
+
 #include "lib/salida.cpp"
 
 using namespace std;
 
 int main(){
-    pantalla* screen = build(2,6,'f','0');
+    setlocale(LC_ALL, "");
+    system("clear");
+    pantalla* screen = build(20,75,'f','0');
+    displaySaludo();
+    system("pause");
+    
+    render(screen);
 
-    cout<<screen;
+    delete[] screen->data;
+    delete[] screen;
     return EXIT_SUCCESS;
 }
