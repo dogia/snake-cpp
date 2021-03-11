@@ -9,10 +9,11 @@ using namespace std;
 
 int main(){
     setlocale(LC_ALL, "");
-    system("clear");
-    pantalla* screen = build(20,75,'f','0');
+    system("cls");
+
+    pantalla* screen = build(50,150,'f','0');
     displaySaludo();
-    system("pause");
+    system("pause"); 
     
     render(screen);
 

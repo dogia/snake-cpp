@@ -34,6 +34,8 @@ void displaySaludo(){
     cout<<"       \\::::/    /              /:::/    /              /:::/    /             \\::|   |                \\:::\\____\\        "<<endl;
     cout<<"        \\::/    /               \\::/    /               \\::/    /               \\:|   |                 \\::/    /        "<<endl;
     cout<<"         \\/____/                 \\/____/                 \\/____/                 \\|___|                  \\/____/         "<<endl;
+    cout<<endl<<endl;
+    cout<<((char) 169)<<" Daniel Osorio Orozco - Ricky Tam Lin"<<endl;
 };
 
 pantalla* build(int alto, int ancho, char font_color, char background_color){
@@ -51,7 +53,7 @@ pantalla* build(int alto, int ancho, char font_color, char background_color){
 }
 
 void render(pantalla* screen){
-    system("clear");
+    system("cls");
     for (int i = 0; i < screen->alto; i++){
         for (int j = 0; j < screen->ancho; j++){
             cout<<*(*(screen->data+i)+j);
